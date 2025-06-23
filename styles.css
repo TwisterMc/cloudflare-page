@@ -209,7 +209,7 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   padding: 10px;
   letter-spacing: -0.5px;
   animation: shine 8s ease-in-out infinite;
