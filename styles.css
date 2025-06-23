@@ -55,14 +55,14 @@ a {
   color: #5425db;
 }
 
-a:hover {
+a:hover, a:focus {
   color: #359ada;
   text-decoration: underline;
 }
 
 .wrapper {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1000px;
   padding: 30px;
   position: relative;
   overflow: hidden;
