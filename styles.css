@@ -13,10 +13,10 @@ body::before {
   width: 200%;
   height: 200%;
   background: 
-    radial-gradient(circle at 25% 25%, rgba(82, 113, 255, 0.25) 0%, transparent 45%),
-    radial-gradient(circle at 75% 75%, rgba(0, 235, 175, 0.25) 0%, transparent 45%),
-    linear-gradient(135deg, #7747ff 0%, #00e5be 100%);
-  opacity: 0.25;
+    radial-gradient(circle at 25% 25%, rgba(89, 116, 255, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(0, 255, 200, 0.4) 0%, transparent 50%),
+    linear-gradient(135deg, #8155ff 0%, #00ffd1 100%);
+  opacity: 0.35;
   animation: subtle-shift 20s ease-in-out infinite;
   z-index: -1;
   will-change: transform;
