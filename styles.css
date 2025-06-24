@@ -12,7 +12,7 @@
 
 [data-theme="dark"] {
   --glass-bg: rgba(0, 0, 0, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(244, 239, 239, 0.2);
   --glass-icon: rgba(0, 0, 0, 0.5);
   --glass-icon-hover: rgba(0, 0, 0, 0.65);
   --text-color: #ffffff;
@@ -164,7 +164,7 @@ a:hover, a:focus {
   width: 50px;
   margin-bottom: 12px;
   filter: saturate(1.2);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .icon>a:hover img {
@@ -543,4 +543,8 @@ input:checked + .slider:before {
 .switch input:focus-visible ~ .slider {
   outline: 2px solid var(--link-color);
   outline-offset: 2px;
+}
+
+[data-theme="dark"] .icon.invert img {
+  filter: brightness(0) invert(.6) saturate(1.2);
 }
