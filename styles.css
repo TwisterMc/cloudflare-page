@@ -321,6 +321,23 @@ h1 {
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: var(--link-color) transparent;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: var(--link-color);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 .modal-header {
@@ -329,6 +346,11 @@ h1 {
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
 }
 
 .modal-header h2 {
@@ -349,15 +371,19 @@ h1 {
   align-items: center;
   justify-content: center;
   color: var(--slider-border);
-  transition: background-color 0.3s ease;
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0.8;
 }
 
 .close-button:hover {
   background: var(--glass-bg);
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .close-button:focus-visible {
-  outline: 2px solid #5425db;
+  opacity: 1;
+  outline: 2px solid var(--link-color);
   outline-offset: 2px;
 }
 
@@ -388,19 +414,23 @@ h1 {
   padding: 10px;
   border-radius: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--glass-bg);
 }
 
 .bg-option label:hover {
   transform: translateY(-5px);
+  background: var(--glass-icon-hover);
 }
 
 .bg-option input[type="radio"]:checked + label {
-  box-shadow: 0 0 0 3px #5425db;
+  box-shadow: 0 0 0 3px var(--link-color);
+  background: var(--glass-icon-hover);
 }
 
 .bg-option input[type="radio"]:focus-visible + label {
-  outline: 2px solid #5425db;
-  outline-offset: 2px;
+  outline: 2px solid var(--link-color);
+  outline-offset: 4px;
+  background: var(--glass-bg);
 }
 
 .bg-option img {
@@ -437,11 +467,16 @@ h1 {
   padding: 10px;
   border-radius: 12px;
   border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  transition: transform 0.3s ease;
 }
 
 .theme-label {
   color: var(--text-color);
   font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  user-select: none;
 }
 
 .switch {
@@ -472,6 +507,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   padding: 5px;
+  box-shadow: 0 2px 8px rgba(31, 38, 135, 0.15);
 }
 
 .slider:before {
@@ -502,4 +538,9 @@ input:checked + .slider:before {
 
 .moon {
   margin-left: 5px;
+}
+
+.switch input:focus-visible ~ .slider {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
 }
