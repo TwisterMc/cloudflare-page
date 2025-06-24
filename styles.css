@@ -1,25 +1,34 @@
 :root {
-  --glass-bg: rgba(255, 255, 255, 0.45);
+  /* Base colors */
+  --white: #ffffff;
+  --black: #000000;
+  
+  /* Glass effects */
+  --glass-alpha: 0.45;
+  --glass-alpha-hover: 0.65;
+  --glass-bg: rgba(255, 255, 255, var(--glass-alpha));
+  --glass-icon: var(--glass-bg);
+  --glass-icon-hover: rgba(255, 255, 255, var(--glass-alpha-hover));
   --glass-border: rgba(255, 255, 255, 0.4);
-  --glass-icon: rgba(255, 255, 255, 0.5);
-  --glass-icon-hover: rgba(255, 255, 255, 0.65);
+  
+  /* UI colors */
   --text-color: #1a1a1a;
   --link-color: #5425db;
   --link-hover: #359ada;
   --modal-bg: rgba(255, 255, 255, 0.7);
-  --slider-border: rgba(0, 0, 0, 1);
+  --slider-border: var(--black);
 }
 
 [data-theme="dark"] {
-  --glass-bg: rgba(0, 0, 0, 0.45);
+  --glass-bg: rgba(0, 0, 0, var(--glass-alpha));
+  --glass-icon: var(--glass-bg);
+  --glass-icon-hover: rgba(0, 0, 0, var(--glass-alpha-hover));
   --glass-border: rgba(244, 239, 239, 0.2);
-  --glass-icon: rgba(0, 0, 0, 0.5);
-  --glass-icon-hover: rgba(0, 0, 0, 0.65);
-  --text-color: #ffffff;
+  --text-color: var(--white);
   --link-color: #9f8cff;
   --link-hover: #72b8ff;
   --modal-bg: rgba(0, 0, 0, 0.7);
-  --slider-border: rgba(255, 255, 255, 1);
+  --slider-border: var(--white);
 }
 
 html {
@@ -117,7 +126,8 @@ a:hover, a:focus {
 .icon {
   list-style: none;
   width: 110px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .icon:hover {
@@ -134,7 +144,7 @@ a:hover, a:focus {
   -webkit-backdrop-filter: blur(5px) saturate(180%);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   outline: 2px solid transparent;
   outline-offset: 2px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
@@ -164,14 +174,12 @@ a:hover, a:focus {
   width: 50px;
   margin-bottom: 12px;
   filter: saturate(1.2);
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .icon>a:hover img {
   transform: scale(1.1);
-  text-align: center;
-  color: #1c1c1e;
-  font-weight: 500;
 }
 
 .spotlight {
@@ -253,17 +261,7 @@ a:hover, a:focus {
   }
 }
 
-@keyframes shine {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+
 
 /* Settings Button */
 .settings-button {
