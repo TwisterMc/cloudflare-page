@@ -3,37 +3,48 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Connect with Thomas McMahon (TwisterMc) - Web Developer in Minneapolis, MN. Find me on various social platforms and check out my work." />
+        <meta name="theme-color" content="#3f8ebc" />
+        
+        <!-- Security headers -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' gc.zgo.at; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' tmc.goatcounter.com;" />
+        <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+        <meta http-equiv="X-Frame-Options" content="DENY" />
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+        
+        <!-- Social Meta Tags -->
+        <meta property="og:title" content="Thomas McMahon - TwisterMc" />
+        <meta property="og:description" content="Connect with Thomas McMahon (TwisterMc) - Software Engineer in Minneapolis, MN" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://twistermc.me/" />
+        <meta property="og:image" content="https://twistermc.me/apple-touch-icon.png" />
+        <meta name="twitter:card" content="summary" />
+        
         <title>Thomas McMahon - TwisterMc - Minneapolis, Mn</title>
+        
+        <!-- Preload critical resources -->
+        <link rel="preload" href="styles.css" as="style" />
+        <link rel="preload" href="js/background.js" as="script" />
+        <link rel="preload" href="icons/gear.svg" as="image" type="image/svg+xml" />
+        
+        <!-- Styles and Scripts -->
         <link rel="stylesheet" href="styles.css" />
         <script
             data-goatcounter="https://tmc.goatcounter.com/count"
             async
             src="//gc.zgo.at/count.js"
+            crossorigin="anonymous"
         ></script>
+        <script src="js/background.js" defer></script>
 
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
+        <!-- Favicons and Manifest -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="theme-color" content="#3f8ebc" />
         <link rel="canonical" href="https://twistermc.me/" />
-        <script src="js/background.js" defer></script>
     </head>
 
     <body>
@@ -87,141 +98,80 @@
 
         <div class="wrapper">
             <h1>Connect with Thomas</h1>
-            <!-- <div><a href="https://www.twistermc.com">www.TwisterMc.com</a></div> -->
             <ul class="icons spotlight">
                 <li class="icon">
-                    <a href="https://www.twistermc.com">
-                        <img
-                            src="icons/com.svg"
-                            alt="Home"
-                            width="50"
-                            aria-hidden="true"
-                        />
+                    <a href="https://www.twistermc.com" rel="me noopener">
+                        <img src="icons/com.svg" alt="" width="50" height="50" loading="eager" aria-hidden="true" />
                         <div>TwisterMc<br />My Website</div>
                     </a>
                 </li>
                 <li class="icon">
-                    <a href="https://nightcafe.art/u/TwisterMc">
-                        <img
-                            src="icons/ai-image.svg"
-                            alt="NightCafe"
-                            width="50"
-                            aria-hidden="true"
-                        />
+                    <a href="https://nightcafe.art/u/TwisterMc" rel="me noopener">
+                        <img src="icons/ai-image.svg" alt="" width="50" height="50" loading="eager" aria-hidden="true" />
                         <div>NightCafe<br />Ai Image Generator</div>
                     </a>
                 </li>
             </ul>
             <ul class="icons">
                 <li class="icon">
-                    <a href="https://bsky.app/profile/twistermc.com">
-                        <img
-                            src="icons/bluesky.svg"
-                            alt="BlueSky"
-                            width="50"
-                            aria-hidden="true"
-                        />BlueSky</a
-                    >
+                    <a href="https://bsky.app/profile/twistermc.com" rel="me noopener">
+                        <img src="icons/bluesky.svg" alt="" width="50" height="50" loading="lazy" aria-hidden="true" />
+                        BlueSky
+                    </a>
                 </li>
-
                 <li class="icon">
-                    <a href="https://profiles.wordpress.org/twistermc/">
-                        <img
-                            src="icons/wordpress.svg"
-                            alt="WordPress"
-                            width="50"
-                            aria-hidden="true"
-                        />
+                    <a href="https://profiles.wordpress.org/twistermc/" rel="me noopener">
+                        <img src="icons/wordpress.svg" alt="" width="50" height="50" loading="lazy" aria-hidden="true" />
                         <div>WordPress</div>
                     </a>
                 </li>
-                <!-- <li class="icon disabled">
-        <a href="#"><img src="icons/reddit.svg" alt="Reddit" width="50"
-            aria-hidden="true" />Reddit</a>
-      </li> -->
                 <li class="icon">
-                    <a href="https://www.linkedin.com/in/twistermc">
-                        <img
-                            src="icons/linkedin.svg"
-                            alt="LinkedIn"
-                            width="50"
-                            aria-hidden="true"
-                        />LinkedIn</a
-                    >
-                </li>
-
-                <li class="icon invert">
-                    <a href="https://github.com/TwisterMc"
-                        ><img
-                            src="icons/github.svg"
-                            alt="GitHub"
-                            width="50"
-                            aria-hidden="true"
-                        />GitHub</a
-                    >
-                </li>
-
-                <li class="icon">
-                    <a href="https://www.facebook.com/twistermc">
-                        <img
-                            src="icons/facebook.svg"
-                            alt="Facebook"
-                            width="50"
-                            aria-hidden="true"
-                        />Facebook</a
-                    >
-                </li>
-
-                <li class="icon">
-                    <a href="https://www.instagram.com/twistermc/">
-                        <img
-                            src="icons/instagram.svg"
-                            alt="Instagram"
-                            width="50"
-                            aria-hidden="true"
-                        />Instagram</a
-                    >
-                </li>
-                <li class="icon">
-                    <a href="https://fosstodon.org/@TwisterMc">
-                        <img
-                            src="icons/mastodon.svg"
-                            alt="Mastodon"
-                            width="50"
-                            aria-hidden="true"
-                        />Mastodon</a
-                    >
-                </li>
-                <li class="icon">
-                    <a href="https://t.snapchat.com/M19lGNyu"
-                        ><img
-                            src="icons/snapchat.svg"
-                            alt="SnapChat"
-                            width="50"
-                            aria-hidden="true"
-                        />SnapChat</a
-                    >
+                    <a href="https://www.linkedin.com/in/twistermc" rel="me noopener">
+                        <img src="icons/linkedin.svg" alt="" width="50" height="50" loading="lazy" aria-hidden="true" />
+                        LinkedIn
+                    </a>
                 </li>
                 <li class="icon invert">
-                    <a href="https://twistermc.tumblr.com/">
-                        <img
-                            src="icons/tumblr.svg"
-                            alt="Tumblr"
-                            width="50"
-                            aria-hidden="true"
-                        />Tumblr</a
-                    >
+                    <a href="https://github.com/TwisterMc" rel="me noopener">
+                        <img src="icons/github.svg" alt="" width="50" height="50" loading="lazy" aria-hidden="true" />
+                        GitHub
+                    </a>
                 </li>
                 <li class="icon">
-                    <a href="https://twitter.com/twistermc">
-                        <img
-                            src="icons/twitter.svg"
-                            alt="Twitter"
-                            width="50"
-                            aria-hidden="true"
-                        />
-                        Twitter/X</a
-                    >
+                    <a href="https://www.facebook.com/twistermc" rel="me noopener">
+                        <img src="icons/facebook.svg" alt="" width="50" height="50" loading="lazy" aria-hidden="true" />
+                        Facebook
+                    </a>
+                </li>
+                <li class="icon">
+                    <a href="https://www.instagram.com/twistermc/" rel="me noopener">
+                        <img src="icons/instagram.svg" alt="" width="50" height="50" loading="lazy" aria-hidden="true" />
+                        Instagram
+                    </a>
+                </li>
+                <li class="icon">
+                    <a href="https://fosstodon.org/@TwisterMc" rel="me noopener">
+                        <img src="icons/mastodon.svg" alt="" width="50" height="50" loading="lazy" aria-hidden="true" />
+                        Mastodon
+                    </a>
+                </li>
+                <li class="icon">
+                    <a href="https://t.snapchat.com/M19lGNyu" rel="me noopener">
+                        <img src="icons/snapchat.svg" alt="" width="50" height="50" loading="lazy" aria-hidden="true" />
+                        SnapChat
+                    </a>
+                </li>
+                <li class="icon invert">
+                    <a href="https://twistermc.tumblr.com/" rel="me noopener">
+                        <img src="icons/tumblr.svg" alt="" width="50" height="50" loading="lazy" aria-hidden="true" />
+                        Tumblr
+                    </a>
+                </li>
+                <li class="icon">
+                    <a href="https://twitter.com/twistermc" rel="me noopener">
+                        <img src="icons/twitter.svg" alt="" width="50" height="50" loading="lazy" aria-hidden="true" />
+                        Twitter/X
+                    </a>
                 </li>
             </ul>
         </div>
