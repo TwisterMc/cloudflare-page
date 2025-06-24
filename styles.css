@@ -143,7 +143,7 @@ a:hover, a:focus {
 .icon>a:focus-visible {
   outline-color: #5425db;
   outline-offset: 4px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--modal-bg);
 }
 
 .icon>a:hover {
@@ -177,6 +177,13 @@ a:hover, a:focus {
 .spotlight {
   display: flex;
   gap: 20px;
+}
+
+@media screen and (min-width: 780px) {
+  .spotlight {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 .spotlight .icon {
@@ -230,23 +237,14 @@ a:hover, a:focus {
   }
 }
 
-
-
-h1 {
-  position: relative;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1c1c1e; /* Fallback */
-  background: linear-gradient(135deg, #7747ff, #00e5be);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0;
-  padding: 10px;
-  letter-spacing: -0.5px;
-  text-shadow: 0 0 30px rgba(119, 71, 255, 0.2);
-  animation: shine 8s ease-in-out infinite;
+ h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #fdfdfe;
+  padding: 0;
+  margin: 0 0 20px;
+  text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+    0px 0px 20px #b393d3;
 }
 
 @keyframes shine {
