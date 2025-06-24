@@ -1,5 +1,5 @@
 :root {
-  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-bg: rgba(255, 255, 255, 0.45);
   --glass-border: rgba(255, 255, 255, 0.4);
   --glass-icon: rgba(255, 255, 255, 0.5);
   --glass-icon-hover: rgba(255, 255, 255, 0.65);
@@ -11,7 +11,7 @@
 }
 
 [data-theme="dark"] {
-  --glass-bg: rgba(0, 0, 0, 0.65);
+  --glass-bg: rgba(0, 0, 0, 0.45);
   --glass-border: rgba(244, 239, 239, 0.2);
   --glass-icon: rgba(0, 0, 0, 0.5);
   --glass-icon-hover: rgba(0, 0, 0, 0.65);
@@ -96,8 +96,8 @@ a:hover, a:focus {
   position: relative;
   overflow: hidden;
   background: var(--glass-bg);
-  backdrop-filter: blur(25px) saturate(200%);
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  backdrop-filter: blur(5px) saturate(200%);
+  -webkit-backdrop-filter: blur(5px) saturate(200%);
   border-radius: 24px;
   border: 1px solid var(--glass-border);
   box-shadow: 
@@ -130,8 +130,8 @@ a:hover, a:focus {
   flex-direction: column;
   padding: 15px 10px;
   background: var(--glass-icon);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(5px) saturate(180%);
+  -webkit-backdrop-filter: blur(5px) saturate(180%);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
@@ -238,13 +238,19 @@ a:hover, a:focus {
 }
 
  h1 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 600;
   color: #fdfdfe;
   padding: 0;
   margin: 0 0 20px;
   text-shadow: 0px 0px 5px #1462aa, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
     0px 0px 20px #b393d3;
+}
+
+@media screen and (min-width: 780px) {
+  h1 {
+    font-size: 50px;
+  }
 }
 
 @keyframes shine {
@@ -268,7 +274,7 @@ a:hover, a:focus {
   height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(25px) saturate(200%);
   -webkit-backdrop-filter: blur(25px) saturate(200%);
   box-shadow: 0 4px 16px rgba(31, 38, 135, 0.15);
