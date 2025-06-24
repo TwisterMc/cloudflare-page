@@ -33,9 +33,48 @@
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="theme-color" content="#3f8ebc" />
         <link rel="canonical" href="https://twistermc.me/" />
+        <script src="js/background.js" defer></script>
     </head>
 
     <body>
+        <button class="settings-button" aria-label="Open Settings" aria-haspopup="dialog">
+            <img src="icons/gear.svg" alt="" width="24" height="24" aria-hidden="true" />
+        </button>
+        
+        <div id="settings-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true" hidden>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">Background Settings</h2>
+                    <button class="close-button" aria-label="Close settings">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="background-options">
+                        <div class="bg-option">
+                            <input type="radio" name="background" id="pink-blue-wave" value="pink-blue-wave.jpg">
+                            <label for="pink-blue-wave">
+                                <img src="images/pink-blue-wave.jpg" alt="Pink and blue waves" width="150">
+                                <span>Pink Blue Wave</span>
+                            </label>
+                        </div>
+                        <div class="bg-option">
+                            <input type="radio" name="background" id="blue-pink-grad" value="blue-pink-grad.jpg">
+                            <label for="blue-pink-grad">
+                                <img src="images/blue-pink-grad.jpg" alt="Blue and pink gradient" width="150">
+                                <span>Blue Pink Gradient</span>
+                            </label>
+                        </div>
+                        <div class="bg-option">
+                            <input type="radio" name="background" id="dark-circuits" value="dark-circuits.jpg">
+                            <label for="dark-circuits">
+                                <img src="images/dark-circuits.jpg" alt="Dark circuit pattern" width="150">
+                                <span>Dark Circuits</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="wrapper">
             <h1>Connect with Thomas</h1>
             <!-- <div><a href="https://www.twistermc.com">www.TwisterMc.com</a></div> -->
