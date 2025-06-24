@@ -1,3 +1,27 @@
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-icon: rgba(255, 255, 255, 0.5);
+  --glass-icon-hover: rgba(255, 255, 255, 0.65);
+  --text-color: #1a1a1a;
+  --link-color: #5425db;
+  --link-hover: #359ada;
+  --modal-bg: rgba(255, 255, 255, 0.7);
+  --slider-border: rgba(0, 0, 0, 1);
+}
+
+[data-theme="dark"] {
+  --glass-bg: rgba(0, 0, 0, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-icon: rgba(0, 0, 0, 0.5);
+  --glass-icon-hover: rgba(0, 0, 0, 0.65);
+  --text-color: #ffffff;
+  --link-color: #9f8cff;
+  --link-hover: #72b8ff;
+  --modal-bg: rgba(0, 0, 0, 0.7);
+  --slider-border: rgba(255, 255, 255, 1);
+}
+
 html {
   --random-bg-image: url('images/pink-blue-wave.jpg');  /* Default fallback */
   background: #f0f2f5;
@@ -57,11 +81,11 @@ body {
 }
 
 a {
-  color: #5425db;
+  color: var(--link-color);
 }
 
 a:hover, a:focus {
-  color: #359ada;
+  color: var(--link-hover);
   text-decoration: underline;
 }
 
@@ -71,11 +95,11 @@ a:hover, a:focus {
   padding: 30px;
   position: relative;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.65);
+  background: var(--glass-bg);
   backdrop-filter: blur(25px) saturate(200%);
   -webkit-backdrop-filter: blur(25px) saturate(200%);
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--glass-border);
   box-shadow: 
     0 8px 32px 0 rgba(31, 38, 135, 0.15),
     inset 0 0 0 1px rgba(255, 255, 255, 0.5);
@@ -105,7 +129,7 @@ a:hover, a:focus {
   align-items: center;
   flex-direction: column;
   padding: 15px 10px;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--glass-icon);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border-radius: 16px;
@@ -123,7 +147,7 @@ a:hover, a:focus {
 }
 
 .icon>a:hover {
-  background: rgba(255, 255, 255, 0.65);
+  background: var(--glass-icon-hover);
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 
     0 4px 15px rgba(31, 38, 135, 0.1),
@@ -287,11 +311,10 @@ h1 {
 }
 
 .modal-content {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(25px) saturate(200%);
-  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  background: var(--modal-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
   width: 90%;
   max-width: 600px;
@@ -310,7 +333,7 @@ h1 {
 
 .modal-header h2 {
   margin: 0;
-  color: #1a1a1a;
+  color: var(--slider-border);
   font-size: 1.5rem;
 }
 
@@ -325,12 +348,12 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1a1a1a;
+  color: var(--slider-border);
   transition: background-color 0.3s ease;
 }
 
 .close-button:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--glass-bg);
 }
 
 .close-button:focus-visible {
@@ -391,7 +414,7 @@ h1 {
 .bg-option span {
   display: block;
   margin-top: 8px;
-  color: #1a1a1a;
+  color: var(--text-color);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -402,4 +425,81 @@ h1 {
   .bg-option label:hover {
     transform: none;
   }
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+}
+
+.theme-label {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--glass-bg);
+  border: 1px solid var(--slider-border);
+  transition: 0.4s;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--slider-border);
+  transition: 0.4s;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.sun, .moon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.sun {
+  margin-right: 5px;
+}
+
+.moon {
+  margin-left: 5px;
 }

@@ -4,6 +4,21 @@ const backgroundImages = [
   'dark-circuits.jpg'
 ];
 
+// Theme handling
+function setTheme(isDark) {
+  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+function initializeTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+  setTheme(isDark);
+  document.getElementById('theme-switch').checked = isDark;
+}
+
+// Background handling
 function setBackground(imageName) {
   document.documentElement.style.setProperty('--random-bg-image', `url('images/${imageName}')`);
   localStorage.setItem('selectedBackground', imageName);
@@ -58,6 +73,15 @@ backgroundOptions.forEach(option => {
     closeModal();
   });
 });
+
+// Theme switch handling
+const themeSwitch = document.getElementById('theme-switch');
+themeSwitch.addEventListener('change', (e) => {
+  setTheme(e.target.checked);
+});
+
+// Initialize theme
+initializeTheme();
 
 // Set initial background
 const savedBackground = localStorage.getItem('selectedBackground');
